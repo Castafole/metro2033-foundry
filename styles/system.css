@@ -1,0 +1,1261 @@
+
+.metro2033-player-sheet {
+  min-width: 680px;
+}
+
+.metro2033-sheet {
+  padding: 16px;
+  color: #e5e0d4;
+  background: #202522;
+  font-family: "Signika", sans-serif;
+}
+
+.metro-sheet-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #566057;
+}
+
+.metro-portrait {
+  flex: 0 0 100px;
+  width: 100px;
+  height: 120px;
+  overflow: hidden;
+  background: #303832;
+  border: 1px solid #6b7568;
+}
+
+.metro-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.metro-identity {
+  flex: 1;
+  min-width: 0;
+}
+
+.metro-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #c6c8b8;
+}
+
+.metro2033-sheet input:not([type="checkbox"]) {
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 6px 8px;
+  color: #f0ece2;
+  background: #151a17;
+  border: 1px solid #596458;
+  border-radius: 3px;
+}
+
+.metro2033-sheet input:not([type="checkbox"]):focus {
+  border-color: #b2b99b;
+  box-shadow: 0 0 0 1px #b2b99b;
+}
+
+.metro-identity input {
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.metro-subtitle {
+  margin: 8px 0 0;
+  color: #a8ad9d;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+}
+
+.metro-tabs {
+  display: flex;
+  gap: 5px;
+  margin: 16px 0;
+  border-bottom: 1px solid #566057;
+}
+
+.metro-tabs button {
+  padding: 10px 16px;
+  color: #c6c8b8;
+  background: #303832;
+  border: 1px solid #566057;
+  border-bottom: 0;
+  cursor: pointer;
+}
+
+.metro-tabs button:hover {
+  background: #3a443b;
+}
+
+.metro-tabs button.is-active {
+  color: #f2eee4;
+  background: #495446;
+  border-color: #89917a;
+  box-shadow: inset 0 2px #b4b99e;
+}
+
+.metro-section-heading {
+  margin-bottom: 12px;
+}
+
+.metro-section-heading h2,
+.metro-tab-panel h2 {
+  margin: 0 0 6px;
+  color: #d9dec8;
+  font-size: 1.15rem;
+  border-bottom: 1px solid #566057;
+  padding-bottom: 7px;
+}
+
+.metro-section-heading p,
+.metro-placeholder {
+  color: #aeb3a6;
+  font-size: 0.85rem;
+}
+
+.metro-attribute-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.metro-attribute-card {
+  padding: 12px;
+  background: #292f2a;
+  border: 1px solid #485248;
+  border-radius: 4px;
+}
+
+.metro-attribute-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #566057;
+}
+
+.metro-attribute-header h3 {
+  margin: 0;
+  color: #e1e4d5;
+  font-size: 1.05rem;
+}
+
+.metro-attribute-header label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c6c8b8;
+  font-size: 0.8rem;
+}
+
+.metro-attribute-header input,
+.metro-skill input {
+  width: 58px;
+  text-align: center;
+}
+
+.metro-skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 7px 0;
+  color: #dedfd4;
+}
+
+.metro-tab-panel[hidden] {
+  display: none !important;
+}
+
+.metro-profile-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(90px, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.metro-profile-fields input {
+  width: 100%;
+}
+
+.metro-tracks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.metro-track-card {
+  min-width: 0;
+  padding: 12px;
+  background: #292f2a;
+  border: 1px solid #485248;
+  border-radius: 4px;
+}
+
+.metro-track-card h3 {
+  margin: 0 0 12px;
+  padding-bottom: 7px;
+  color: #d9dec8;
+  border-bottom: 1px solid #566057;
+  font-size: 1rem;
+}
+
+.metro-conditions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 8px;
+}
+
+.metro-check {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #dedfd4;
+}
+
+.metro2033-sheet .metro-check input,
+.metro2033-sheet .metro-box-track input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  flex: 0 0 16px;
+  accent-color: #a7ae8d;
+  cursor: pointer;
+}
+
+.metro-box-track {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.metro-box-track label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: #c6c8b8;
+  font-size: 0.75rem;
+}
+
+.metro-track-separator {
+  height: 28px;
+  margin: 0 3px;
+  border-left: 2px solid #929983;
+}
+
+.metro-hint {
+  margin: 10px 0 0;
+  color: #aeb3a6;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 760px) {
+  .metro-tracks {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Fenêtre de fiche redimensionnable et contenu défilant */
+.metro2033-player-sheet .window-content {
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #697563 #202522;
+}
+
+/* Blessures, traumatismes et biographie */
+.metro-text-panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.metro-text-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px;
+  background: #292f2a;
+  border: 1px solid #485248;
+  border-radius: 4px;
+}
+
+.metro-text-card h3 {
+  margin: 0;
+  padding-bottom: 7px;
+  color: #d9dec8;
+  border-bottom: 1px solid #566057;
+  font-size: 1rem;
+}
+
+.metro2033-sheet .metro-text-card textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 110px;
+  padding: 8px;
+  color: #f0ece2;
+  background: #151a17;
+  border: 1px solid #596458;
+  border-radius: 3px;
+  font: inherit;
+  line-height: 1.4;
+  resize: vertical;
+}
+
+.metro2033-sheet .metro-text-card textarea:focus {
+  border-color: #b2b99b;
+  box-shadow: 0 0 0 1px #b2b99b;
+}
+
+.metro-biography {
+  margin-top: 12px;
+}
+
+.metro-text-label {
+  color: #c6c8b8;
+  font-size: 0.9rem;
+}
+
+.metro2033-sheet .metro-biography textarea {
+  min-height: 280px;
+}
+
+@media (max-width: 760px) {
+  .metro-text-panels {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.metro-aptitude-header {
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #566057;
+}
+
+.metro-aptitude-header h2 {
+  margin: 6px 0 0;
+  color: #d9dec8;
+}
+
+.metro-aptitude-description {
+  margin-top: 18px;
+}
+
+.metro2033-sheet .metro-aptitude-description textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 260px;
+  padding: 10px;
+  color: #f0ece2;
+  background: #151a17;
+  border: 1px solid #596458;
+  border-radius: 3px;
+  font: inherit;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.metro-aptitude-actions {
+  margin-top: 16px;
+}
+
+.metro-aptitude-actions button {
+  width: 100%;
+  padding: 10px;
+  color: #f0ece2;
+  background: #495446;
+  border: 1px solid #89917a;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.metro-aptitude-actions button:hover {
+  background: #596653;
+}
+
+.metro-chat-aptitude h2 {
+  padding-bottom: 6px;
+  border-bottom: 1px solid #89917a;
+}
+
+/* Liste des aptitudes du personnage */
+.metro-aptitudes-card {
+  margin-top: 12px;
+  padding: 12px;
+  background: #292f2a;
+  border: 1px dashed #75816e;
+  border-radius: 4px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.metro-aptitudes-card:hover {
+  border-color: #a7ae8d;
+}
+
+.metro-aptitudes-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #566057;
+}
+
+.metro-aptitudes-heading h3 {
+  margin: 0;
+  color: #d9dec8;
+  font-size: 1rem;
+}
+
+.metro-aptitudes-heading span {
+  color: #aeb3a6;
+  font-size: 0.8rem;
+}
+
+.metro-aptitude-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.metro2033-sheet .metro-aptitude-name {
+  width: auto;
+  padding: 7px 12px;
+  color: #f0ece2;
+  background: #3b463a;
+  border: 1px solid #697563;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.metro2033-sheet .metro-aptitude-name:hover {
+  background: #52604d;
+  border-color: #a7ae8d;
+}
+
+.metro-aptitude-empty {
+  margin: 0;
+  color: #aeb3a6;
+  font-size: 0.85rem;
+}
+
+/* Présentation des aptitudes et bouton de retrait */
+.metro-aptitude-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+}
+
+.metro-aptitude-row {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  min-width: 0;
+}
+
+.metro2033-sheet .metro-aptitude-name {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.metro2033-sheet .metro-aptitude-remove {
+  flex: 0 0 36px;
+  width: 36px;
+  padding: 4px;
+  color: #e4c7b8;
+  background: #352b28;
+  border: 1px solid #765b50;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.metro2033-sheet .metro-aptitude-remove:hover {
+  color: #fff0e5;
+  background: #6b3930;
+  border-color: #bd8070;
+}
+
+/* Indication visuelle des compétences lançables */
+.metro2033-sheet .metro-skill {
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.metro2033-sheet .metro-skill:hover {
+  color: #d9dec8;
+  background: rgba(167, 174, 141, 0.08);
+}
+
+.metro2033-sheet .metro-skill input {
+  cursor: text;
+}
+
+/* Fenêtre de préparation du jet */
+.metro-roll-dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 4px;
+}
+
+.metro-roll-dialog-content h3 {
+  margin: 0;
+}
+
+.metro-roll-modifier {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metro-roll-modifier input {
+  max-width: 120px;
+  padding: 7px;
+}
+
+/* Carte de résultat dans le chat */
+.metro-roll-card {
+  padding: 10px;
+  color: #e5e0d4;
+  background: #202522;
+  border: 1px solid #566057;
+  border-radius: 4px;
+}
+
+.metro-roll-header {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #566057;
+}
+
+.metro-roll-header h3 {
+  margin: 0 0 4px;
+  color: #d9dec8;
+}
+
+.metro-roll-header span {
+  color: #aeb3a6;
+  font-size: 0.85rem;
+}
+
+.metro-roll-formula {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 14px;
+  margin: 10px 0;
+  font-size: 0.85rem;
+}
+
+.metro-roll-subheading {
+  margin: 12px 0 7px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #485248;
+  color: #d9dec8;
+}
+
+.metro-roll-group {
+  margin: 8px 0;
+}
+
+.metro-roll-group-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+  color: #c6c8b8;
+  font-size: 0.82rem;
+}
+
+.metro-roll-group-heading h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.metro-roll-dice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.metro-roll-die {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.metro-roll-die-normal {
+  color: #f0ece2;
+  background: #303832;
+  border-color: #7d8977;
+}
+
+.metro-roll-die-stress {
+  color: #f3d4c7;
+  background: #4a2e29;
+  border-color: #bd8070;
+}
+
+.metro-roll-die.is-success {
+  color: #ffffff;
+  background: #53684a;
+  border-color: #b2c99f;
+}
+
+.metro-roll-die.is-affliction {
+  color: #ffffff;
+  background: #793e35;
+  border-color: #e0a091;
+}
+
+.metro-roll-die.is-eliminated {
+  opacity: 0.45;
+  text-decoration: line-through;
+}
+
+.metro-roll-die.is-neutral-one {
+  border-style: dashed;
+}
+
+.metro-roll-die.will-reroll {
+  border-style: dashed;
+}
+
+.metro-roll-die.was-rerolled {
+  opacity: 0.6;
+}
+
+.metro-roll-empty {
+  color: #aeb3a6;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.metro-roll-totals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.metro-roll-totals > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+  background: #303832;
+  border: 1px solid #485248;
+  border-radius: 3px;
+}
+
+.metro-roll-outcome {
+  margin: 10px 0 5px;
+  font-weight: 700;
+}
+
+.metro-roll-outcome.is-success {
+  color: #b8d5a7;
+}
+
+.metro-roll-outcome.is-failure {
+  color: #e0a091;
+}
+
+.metro-roll-explanation {
+  color: #aeb3a6;
+  font-size: 0.8rem;
+}
+
+.metro-force-roll {
+  width: 100%;
+  padding: 9px;
+  color: #f0ece2;
+  background: #495446;
+  border: 1px solid #89917a;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.metro-force-roll:hover {
+  background: #596653;
+}
+
+.metro-force-roll:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+/* Fiche d'objet général */
+.metro-item-properties {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.metro-item-properties input {
+  width: 100%;
+}
+
+.metro-item-description {
+  margin-top: 18px;
+}
+
+.metro2033-sheet .metro-item-description textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 230px;
+  padding: 10px;
+  color: #f0ece2;
+  background: #151a17;
+  border: 1px solid #596458;
+  border-radius: 3px;
+  font: inherit;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+@media (max-width: 560px) {
+  .metro-item-properties {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Publication des objets généraux dans le chat */
+.metro-item-actions {
+  margin-top: 16px;
+}
+
+.metro-item-actions button {
+  width: 100%;
+  padding: 10px;
+  color: #f0ece2;
+  background: #495446;
+  border: 1px solid #89917a;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.metro-item-actions button:hover {
+  background: #596653;
+}
+
+.metro-chat-generic-item h2 {
+  margin-bottom: 10px;
+  padding-bottom: 7px;
+  color: #293629;
+  border-bottom: 1px solid #89917a;
+  font-weight: 700;
+}
+
+.metro-chat-item-description {
+  margin: 10px 0;
+  white-space: normal;
+}
+
+/* Fiche d'arme */
+.metro-weapon-properties {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.metro-weapon-properties input:not([type="checkbox"]),
+.metro-weapon-properties select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+}
+
+.metro-weapon-explosive {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: end;
+  min-height: 38px;
+  color: #dedfd4;
+}
+
+.metro2033-sheet .metro-weapon-explosive input[type="checkbox"] {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  accent-color: #a7ae8d;
+}
+
+.metro-chat-weapon h2 {
+  margin-bottom: 10px;
+  padding-bottom: 7px;
+  color: #293629;
+  border-bottom: 1px solid #89917a;
+  font-weight: 700;
+}
+
+.metro-weapon-chat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px 12px;
+}
+
+.metro-weapon-chat-grid p {
+  margin: 4px 0;
+}
+
+@media (max-width: 560px) {
+  .metro-weapon-properties,
+  .metro-weapon-chat-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Fiche d'arme : conserver l'accès aux boutons en bas */
+.metro2033-weapon-sheet .window-content {
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #697563 #202522;
+}
+
+/* Fiches de protection : défilement et champs */
+.metro2033-armor-sheet .window-content {
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #697563 #202522;
+}
+
+.metro-armor-properties {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.metro-armor-properties input:not([type="checkbox"]),
+.metro-armor-properties select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+}
+
+.metro-armor-resilience {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: end;
+  color: #dedfd4;
+  font-size: 0.85rem;
+}
+
+.metro2033-sheet .metro-armor-resilience input[type="checkbox"] {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  margin: 2px 0 0;
+  padding: 0;
+  accent-color: #a7ae8d;
+}
+
+.metro-chat-armor h2,
+.metro-chat-armor-roll h2 {
+  margin-bottom: 10px;
+  padding-bottom: 7px;
+  color: #293629;
+  border-bottom: 1px solid #89917a;
+  font-weight: 700;
+}
+
+.metro-chat-armor-roll .metro-roll-dice {
+  margin: 10px 0;
+}
+
+@media (max-width: 560px) {
+  .metro-armor-properties {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Organisation de l'inventaire */
+.metro-inventory-section {
+  margin-top: 16px;
+}
+
+.metro-inventory-section > .metro-section-heading {
+  margin-bottom: 10px;
+}
+
+.metro-reserves-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.metro-reserve-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+  padding: 12px;
+  background: #292f2a;
+  border: 1px solid #485248;
+  border-radius: 4px;
+}
+
+.metro2033-sheet .metro-reserve-name {
+  flex: 1;
+  min-width: 0;
+  padding: 7px;
+  color: #d9dec8;
+  background: #303832;
+  border: 1px solid #596458;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.metro2033-sheet .metro-reserve-name:hover {
+  color: #ffffff;
+  background: #495446;
+  border-color: #a7ae8d;
+}
+
+.metro-reserve-card label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #c6c8b8;
+  font-size: 0.8rem;
+}
+
+.metro2033-sheet .metro-reserve-card input {
+  width: 54px;
+  text-align: center;
+}
+
+.metro-inventory-dropzone {
+  padding: 16px;
+  background: #292f2a;
+  border: 1px dashed #697563;
+  border-radius: 4px;
+}
+
+.metro-encumbrance-section {
+  padding: 12px;
+  background: #292f2a;
+  border: 1px solid #485248;
+  border-radius: 4px;
+}
+
+.metro-encumbrance-section h2 {
+  margin-top: 0;
+  color: #d9dec8;
+}
+
+.metro-chat-reserve h2 {
+  margin-bottom: 10px;
+  padding-bottom: 7px;
+  color: #293629;
+  border-bottom: 1px solid #89917a;
+  font-weight: 700;
+}
+
+.metro-chat-reserve .metro-roll-dice {
+  margin: 10px 0;
+}
+
+@media (max-width: 560px) {
+  .metro-reserves-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .metro-reserve-card {
+    flex-wrap: wrap;
+  }
+}
+
+/* Lignes d'équipement transporté */
+.metro-inventory-dropzone {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-height: 48px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.metro-inventory-dropzone:hover {
+  border-color: #a7ae8d;
+}
+
+.metro-inventory-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 8px;
+  background: #202522;
+  border: 1px solid #485248;
+  border-radius: 3px;
+}
+
+.metro2033-sheet .metro-inventory-item-name {
+  flex: 1 1 150px;
+  min-width: 0;
+  padding: 6px 8px;
+  color: #d9dec8;
+  background: #303832;
+  border: 1px solid #596458;
+  border-radius: 3px;
+  text-align: left;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.metro2033-sheet .metro-inventory-item-name:hover {
+  color: #ffffff;
+  background: #495446;
+  border-color: #a7ae8d;
+}
+
+.metro-inventory-detail {
+  color: #c6c8b8;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.metro-inventory-total {
+  padding: 4px 6px;
+  color: #d9dec8;
+  background: #303832;
+  border-radius: 3px;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.metro2033-sheet .metro-inventory-remove {
+  flex: 0 0 32px;
+  width: 32px;
+  padding: 5px;
+  color: #e4c7b8;
+  background: #352b28;
+  border: 1px solid #765b50;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.metro2033-sheet .metro-inventory-remove:hover {
+  color: #fff0e5;
+  background: #6b3930;
+  border-color: #bd8070;
+}
+
+.metro2033-sheet .metro-inventory-open {
+  padding: 5px 8px;
+  color: #dedfd4;
+  background: #303832;
+  border: 1px solid #596458;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.metro2033-sheet .metro-inventory-protection-roll {
+  padding: 9px;
+  color: #f0ece2;
+  background: #495446;
+  border: 1px solid #89917a;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.metro2033-sheet .metro-inventory-protection-roll:hover {
+  background: #596653;
+}
+
+.metro-inventory-empty {
+  margin: 0;
+  color: #aeb3a6;
+  font-size: 0.85rem;
+}
+
+.metro-encumbrance-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #202522;
+  border-radius: 3px;
+}
+
+.metro-encumbrance-ok,
+.metro-encumbrance-warning {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.metro-encumbrance-ok {
+  color: #b8d5a7;
+}
+
+.metro-encumbrance-warning {
+  color: #e0a091;
+}
+
+.metro-encumbrance-breakdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 10px;
+  color: #c6c8b8;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 650px) {
+  .metro-inventory-row {
+    align-items: stretch;
+  }
+
+  .metro2033-sheet .metro-inventory-item-name {
+    flex-basis: 100%;
+  }
+}
+
+/* Initiative Métro 2033 dans le suivi de combat */
+.metro2033-initiative-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: calc(100% - 8px);
+  margin: 8px 4px;
+  padding: 8px 10px;
+  color: #f0ece2;
+  background: #495446;
+  border: 1px solid #89917a;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.metro2033-initiative-button:hover {
+  background: #596653;
+  border-color: #b2b99e;
+}
+
+.metro2033-initiative-button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+/* Illustration des objets */
+.metro-item-illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.75rem auto 1rem;
+}
+
+.metro-item-illustration img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  border: 1px solid var(--color-border-light-2, #777);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.metro-item-illustration img:hover {
+  opacity: 0.85;
+}
+
+/* Défilement des fiches d'objets génériques */
+.metro-generic-item-sheet {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding-right: 8px;
+}
+
+/* Défilement des fiches d'aptitudes */
+.metro-aptitude-sheet {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding-right: 8px;
+}
+
+/* Vignettes des objets dans l'inventaire */
+.metro-inventory-thumbnail {
+  display: block;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid var(--color-border-light-2, #777);
+  margin-right: 8px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Valeurs de base et actuelles des attributs */
+.metro-attribute-values {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.metro-attribute-values label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+
+.metro-attribute-values input {
+  width: 58px;
+  max-width: 100%;
+  box-sizing: border-box;
+}

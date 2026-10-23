@@ -1,0 +1,499 @@
+
+<div class="metro2033-sheet">
+  <header class="metro-sheet-header">
+<div class="metro-portrait">
+  <img
+    src="{{actor.img}}"
+    data-edit="img"
+    alt="Portrait de {{actor.name}}"
+    title="Cliquer pour modifier le portrait ou le token"
+  >
+</div>
+
+    <div class="metro-identity">
+      <label class="metro-field">
+        <span>Nom du personnage</span>
+        <input
+          type="text"
+          name="name"
+          value="{{actor.name}}"
+          placeholder="Nom du survivant"
+        >
+      </label>
+      
+    <div class="metro-profile-fields">
+    <label class="metro-field">
+        <span>Archétype</span>
+        <input
+        type="text"
+        name="system.archetype"
+        value="{{system.archetype}}"
+        placeholder="Ex. : Soldat, Stalker..."
+        >
+    </label>
+
+    <label class="metro-field">
+        <span>Expérience (XP)</span>
+        <input
+        type="number"
+        name="system.xp"
+        value="{{system.xp}}"
+        min="0"
+        step="1"
+        >
+    </label>
+    </div>
+
+      <p class="metro-subtitle">MÉTRO 2033 · PERSONNAGE JOUEUR</p>
+    </div>
+  </header>
+
+  <nav class="metro-tabs" role="tablist" aria-label="Fiche du personnage">
+    <button type="button" data-metro-tab="general" role="tab">Général</button>
+    <button type="button" data-metro-tab="inventaire" role="tab">Inventaire</button>
+    <button type="button" data-metro-tab="donnees" role="tab">Données</button>
+  </nav>
+
+  <section class="metro-tab-panel" data-metro-panel="general" role="tabpanel">
+    <div class="metro-section-heading">
+      <h2>Attributs & compétences</h2>
+      <p>Les valeurs initiales sont provisoires.</p>
+    </div>
+
+    <div class="metro-attribute-grid">
+      <section class="metro-attribute-card">
+
+        <div class="metro-attribute-header">
+          <h3>Vigueur</h3>
+          <div class="metro-attribute-values">
+            <label>Base
+              <input type="number"
+                name="system.vigueur.base"
+                value="{{system.vigueur.base}}"
+                min="0" step="1">
+            </label>
+            <label>Actuelle
+              <input type="number"
+                name="system.vigueur.value"
+                value="{{system.vigueur.value}}"
+                min="0" step="1">
+            </label>
+          </div>
+        </div>
+
+        <label class="metro-skill">Bricolage
+          <input type="number" name="system.vigueur.skills.bricolage"
+            value="{{system.vigueur.skills.bricolage}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Corps à corps
+          <input type="number" name="system.vigueur.skills.corpsMelee"
+            value="{{system.vigueur.skills.corpsMelee}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Endurance
+          <input type="number" name="system.vigueur.skills.endurance"
+            value="{{system.vigueur.skills.endurance}}" min="0" step="1">
+        </label>
+      </section>
+
+      <section class="metro-attribute-card">
+      <div class="metro-attribute-header">
+        <h3>Agilité</h3>
+        <div class="metro-attribute-values">
+          <label>Base
+            <input type="number" name="system.agilite.base"
+              value="{{system.agilite.base}}" min="0" step="1">
+          </label>
+          <label>Actuelle
+            <input type="number" name="system.agilite.value"
+              value="{{system.agilite.value}}" min="0" step="1">
+          </label>
+        </div>
+      </div>
+        <label class="metro-skill">Furtivité
+          <input type="number" name="system.agilite.skills.furtivite"
+            value="{{system.agilite.skills.furtivite}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Réaction
+          <input type="number" name="system.agilite.skills.reaction"
+            value="{{system.agilite.skills.reaction}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Tir
+          <input type="number" name="system.agilite.skills.tir"
+            value="{{system.agilite.skills.tir}}" min="0" step="1">
+        </label>
+      </section>
+
+      <section class="metro-attribute-card">
+      <div class="metro-attribute-header">
+        <h3>Empathie</h3>
+        <div class="metro-attribute-values">
+          <label>Base
+            <input type="number" name="system.empathie.base"
+              value="{{system.empathie.base}}" min="0" step="1">
+          </label>
+          <label>Actuelle
+            <input type="number" name="system.empathie.value"
+              value="{{system.empathie.value}}" min="0" step="1">
+          </label>
+        </div>
+      </div>
+        <label class="metro-skill">Soins
+          <input type="number" name="system.empathie.skills.soins"
+            value="{{system.empathie.skills.soins}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Manipulation
+          <input type="number" name="system.empathie.skills.manipulation"
+            value="{{system.empathie.skills.manipulation}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Analyse
+          <input type="number" name="system.empathie.skills.analyse"
+            value="{{system.empathie.skills.analyse}}" min="0" step="1">
+        </label>
+      </section>
+
+      <section class="metro-attribute-card">
+      <div class="metro-attribute-header">
+        <h3>Esprit</h3>
+        <div class="metro-attribute-values">
+          <label>Base
+            <input type="number" name="system.esprit.base"
+              value="{{system.esprit.base}}" min="0" step="1">
+          </label>
+          <label>Actuelle
+            <input type="number" name="system.esprit.value"
+              value="{{system.esprit.value}}" min="0" step="1">
+          </label>
+        </div>
+      </div>
+        <label class="metro-skill">Survie
+          <input type="number" name="system.esprit.skills.survie"
+            value="{{system.esprit.skills.survie}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Observation
+          <input type="number" name="system.esprit.skills.observation"
+            value="{{system.esprit.skills.observation}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Compréhension
+          <input type="number" name="system.esprit.skills.comprehension"
+            value="{{system.esprit.skills.comprehension}}" min="0" step="1">
+        </label>
+      </section>
+    </div>
+      <div class="metro-tracks">
+    <section class="metro-track-card">
+        <h3>États</h3>
+        <div class="metro-conditions">
+        <label class="metro-check">
+            <input type="checkbox" name="system.conditions.affame"
+            {{#if system.conditions.affame}}checked{{/if}}>
+            <span>Affamé</span>
+        </label>
+        <label class="metro-check">
+            <input type="checkbox" name="system.conditions.deshydrate"
+            {{#if system.conditions.deshydrate}}checked{{/if}}>
+            <span>Déshydraté</span>
+        </label>
+        <label class="metro-check">
+            <input type="checkbox" name="system.conditions.epuise"
+            {{#if system.conditions.epuise}}checked{{/if}}>
+            <span>Épuisé</span>
+        </label>
+        <label class="metro-check">
+            <input type="checkbox" name="system.conditions.gele"
+            {{#if system.conditions.gele}}checked{{/if}}>
+            <span>Gelé</span>
+        </label>
+        </div>
+    </section>
+
+    <section class="metro-track-card">
+        <h3>Stress</h3>
+        <div class="metro-box-track" aria-label="Piste de stress">
+        <label><input type="checkbox" name="system.stress.case1" {{#if system.stress.case1}}checked{{/if}}><span>1</span></label>
+        <label><input type="checkbox" name="system.stress.case2" {{#if system.stress.case2}}checked{{/if}}><span>2</span></label>
+        <label><input type="checkbox" name="system.stress.case3" {{#if system.stress.case3}}checked{{/if}}><span>3</span></label>
+        <label><input type="checkbox" name="system.stress.case4" {{#if system.stress.case4}}checked{{/if}}><span>4</span></label>
+        <label><input type="checkbox" name="system.stress.case5" {{#if system.stress.case5}}checked{{/if}}><span>5</span></label>
+        </div>
+    </section>
+
+    <section class="metro-track-card">
+        <h3>Sang-froid</h3>
+        <div class="metro-box-track" aria-label="Piste de sang-froid">
+        <label><input type="checkbox" name="system.sangFroid.normal1" {{#if system.sangFroid.normal1}}checked{{/if}}><span>1</span></label>
+        <label><input type="checkbox" name="system.sangFroid.normal2" {{#if system.sangFroid.normal2}}checked{{/if}}><span>2</span></label>
+        <label><input type="checkbox" name="system.sangFroid.normal3" {{#if system.sangFroid.normal3}}checked{{/if}}><span>3</span></label>
+        <label><input type="checkbox" name="system.sangFroid.normal4" {{#if system.sangFroid.normal4}}checked{{/if}}><span>4</span></label>
+        <label><input type="checkbox" name="system.sangFroid.normal5" {{#if system.sangFroid.normal5}}checked{{/if}}><span>5</span></label>
+
+        <span class="metro-track-separator" aria-hidden="true"></span>
+
+        <label><input type="checkbox" name="system.sangFroid.aptitude1" {{#if system.sangFroid.aptitude1}}checked{{/if}}><span>+</span></label>
+        <label><input type="checkbox" name="system.sangFroid.aptitude2" {{#if system.sangFroid.aptitude2}}checked{{/if}}><span>+</span></label>
+        </div>
+        <p class="metro-hint">Les deux dernières cases sont réservées à l'aptitude.</p>
+    </section>
+
+    <section class="metro-track-card">
+        <h3>Radiations</h3>
+        <div class="metro-box-track metro-radiation-track" aria-label="Piste de radiations">
+        <label><input type="checkbox" name="system.radiations.case1" {{#if system.radiations.case1}}checked{{/if}}><span>1</span></label>
+        <label><input type="checkbox" name="system.radiations.case2" {{#if system.radiations.case2}}checked{{/if}}><span>2</span></label>
+        <label><input type="checkbox" name="system.radiations.case3" {{#if system.radiations.case3}}checked{{/if}}><span>3</span></label>
+        <label><input type="checkbox" name="system.radiations.case4" {{#if system.radiations.case4}}checked{{/if}}><span>4</span></label>
+        <label><input type="checkbox" name="system.radiations.case5" {{#if system.radiations.case5}}checked{{/if}}><span>5</span></label>
+        <label><input type="checkbox" name="system.radiations.case6" {{#if system.radiations.case6}}checked{{/if}}><span>6</span></label>
+        <label><input type="checkbox" name="system.radiations.case7" {{#if system.radiations.case7}}checked{{/if}}><span>7</span></label>
+        <label><input type="checkbox" name="system.radiations.case8" {{#if system.radiations.case8}}checked{{/if}}><span>8</span></label>
+        <label><input type="checkbox" name="system.radiations.case9" {{#if system.radiations.case9}}checked{{/if}}><span>9</span></label>
+        <label><input type="checkbox" name="system.radiations.case10" {{#if system.radiations.case10}}checked{{/if}}><span>10</span></label>
+        </div>
+    </section>
+    </div>
+    
+    <section class="metro-aptitudes-card" data-aptitude-dropzone>
+    <div class="metro-aptitudes-heading">
+        <h3>Aptitudes</h3>
+        <span>Glisse les aptitudes ici</span>
+    </div>
+
+    <div class="metro-aptitude-list">
+        {{#if aptitudes.length}}
+
+        {{#each aptitudes as |aptitude|}}
+        <div class="metro-aptitude-row">
+            <button
+            type="button"
+            class="metro-aptitude-name"
+            data-open-aptitude="{{aptitude.id}}"
+            title="Ouvrir la fiche de {{aptitude.name}}"
+            >
+            {{aptitude.name}}
+            </button>
+
+            <button
+            type="button"
+            class="metro-aptitude-remove"
+            data-remove-aptitude="{{aptitude.id}}"
+            title="Retirer cette aptitude du personnage"
+            aria-label="Retirer {{aptitude.name}}"
+            >
+            ×
+            </button>
+        </div>
+        {{/each}}
+
+        {{else}}
+        <p class="metro-aptitude-empty">
+            Aucune aptitude pour le moment. Dépose un objet Aptitude dans cette zone.
+        </p>
+        {{/if}}
+    </div>
+    </section>
+
+
+    <div class="metro-text-panels">
+    <section class="metro-text-card">
+        <h3>Blessures critiques</h3>
+        <textarea
+        name="system.criticalInjuries"
+        placeholder="Décris ici les blessures critiques du personnage...">{{system.criticalInjuries}}</textarea>
+    </section>
+
+    <section class="metro-text-card">
+        <h3>Traumatismes psychologiques</h3>
+        <textarea
+        name="system.psychologicalTraumas"
+        placeholder="Décris ici les traumatismes psychologiques...">{{system.psychologicalTraumas}}</textarea>
+    </section>
+    </div>
+
+  </section>
+
+
+
+<section class="metro-tab-panel" data-metro-panel="inventaire" role="tabpanel" hidden>
+  <h2>Inventaire & équipement</h2>
+
+  <!-- Réserves -->
+  <section class="metro-inventory-section">
+    <div class="metro-section-heading">
+      <h2>Réserves</h2>
+      <p>Clique sur le nom d'une réserve pour lancer son jet.</p>
+    </div>
+
+    <div class="metro-reserves-grid">
+      <section class="metro-reserve-card">
+        <button type="button" class="metro-reserve-name" data-reserve-roll="eau">Eau</button>
+        <label>Niveau
+          <input type="number" name="system.reserves.eau" value="{{system.reserves.eau}}" min="0" max="10" step="1">
+        </label>
+      </section>
+
+      <section class="metro-reserve-card">
+        <button type="button" class="metro-reserve-name" data-reserve-roll="nourriture">Nourriture</button>
+        <label>Niveau
+          <input type="number" name="system.reserves.nourriture" value="{{system.reserves.nourriture}}" min="0" max="10" step="1">
+        </label>
+      </section>
+
+      <section class="metro-reserve-card">
+        <button type="button" class="metro-reserve-name" data-reserve-roll="filtresAir">Filtres à air</button>
+        <label>Niveau
+          <input type="number" name="system.reserves.filtresAir" value="{{system.reserves.filtresAir}}" min="0" max="10" step="1">
+        </label>
+      </section>
+
+      <section class="metro-reserve-card">
+        <button type="button" class="metro-reserve-name" data-reserve-roll="energie">Énergie</button>
+        <label>Niveau
+          <input type="number" name="system.reserves.energie" value="{{system.reserves.energie}}" min="0" max="10" step="1">
+        </label>
+      </section>
+    </div>
+  </section>
+
+  <!-- Objets généraux -->
+  <section class="metro-inventory-section">
+    <div class="metro-section-heading">
+      <h2>Objets généraux</h2>
+      <p>Dépose ici les objets génériques du répertoire Objets.</p>
+    </div>
+
+    <div class="metro-inventory-dropzone" data-item-dropzone="generic">
+      {{#if genericItems.length}}
+        {{#each genericItems as |item|}}
+          <div class="metro-inventory-row">
+            <img
+              class="metro-inventory-thumbnail"
+              src="{{item.img}}"
+              alt="Illustration de {{item.name}}"
+              title="{{item.name}}"
+            >
+            <button type="button" class="metro-inventory-item-name" data-open-item="{{item.id}}" title="Ouvrir la fiche de {{item.name}}">
+              {{item.name}}
+            </button>
+            <span class="metro-inventory-detail">Qté : {{item.system.quantity}}</span>
+            <span class="metro-inventory-detail">Par objet : {{item.system.encumbrance}}</span>
+            <span class="metro-inventory-total">{{item.totalEncumbrance}} empl.</span>
+            <button type="button" class="metro-inventory-remove" data-remove-item="{{item.id}}" title="Retirer de l'inventaire" aria-label="Retirer {{item.name}}">×</button>
+          </div>
+        {{/each}}
+      {{else}}
+        <p class="metro-inventory-empty">Dépose un objet général ici.</p>
+      {{/if}}
+    </div>
+  </section>
+
+  <!-- Armes -->
+  <section class="metro-inventory-section">
+    <div class="metro-section-heading">
+      <h2>Armes</h2>
+      <p>Clique sur le nom pour lancer une attaque ; le bouton « Fiche » ouvre ses caractéristiques.</p>
+    </div>
+
+    <div class="metro-inventory-dropzone" data-item-dropzone="weapon">
+      {{#if weaponItems.length}}
+        {{#each weaponItems as |item|}}
+          <div class="metro-inventory-row metro-weapon-inventory-row">
+              <img
+              class="metro-inventory-thumbnail"
+              src="{{item.img}}"
+              alt="Illustration de {{item.name}}"
+              title="{{item.name}}"
+            >
+            <button type="button" class="metro-inventory-item-name" data-attack-weapon="{{item.id}}" title="Lancer une attaque avec {{item.name}}">
+              {{item.name}}
+            </button>
+            <span class="metro-inventory-detail">{{item.system.grip}}</span>
+            <span class="metro-inventory-detail">Bonus +{{item.system.bonus}}</span>
+            <span class="metro-inventory-detail">Dégâts {{item.system.damage}}{{#if item.system.explosive}} (E){{/if}}</span>
+            <span class="metro-inventory-detail">Fiabilité {{item.system.reliability}}</span>
+            <span class="metro-inventory-detail">{{item.system.range}}</span>
+            <span class="metro-inventory-total">{{item.system.encumbrance}} empl.</span>
+            <button type="button" class="metro-inventory-open" data-open-item="{{item.id}}" title="Ouvrir la fiche">Fiche</button>
+            <button type="button" class="metro-inventory-remove" data-remove-item="{{item.id}}" title="Retirer de l'inventaire" aria-label="Retirer {{item.name}}">×</button>
+          </div>
+        {{/each}}
+      {{else}}
+        <p class="metro-inventory-empty">Dépose une arme ici.</p>
+      {{/if}}
+    </div>
+  </section>
+
+  <!-- Protections -->
+  <section class="metro-inventory-section">
+    <div class="metro-section-heading">
+      <h2>Protections</h2>
+      <p>Le jet prend en compte ensemble les valeurs d'armure et de casque.</p>
+    </div>
+
+    <div class="metro-inventory-dropzone" data-item-dropzone="armor">
+      {{#if armorItems.length}}
+        {{#each armorItems as |item|}}
+          <div class="metro-inventory-row">
+          <img
+              class="metro-inventory-thumbnail"
+              src="{{item.img}}"
+              alt="Illustration de {{item.name}}"
+              title="{{item.name}}"
+            >
+            <button type="button" class="metro-inventory-item-name" data-open-item="{{item.id}}" title="Ouvrir la fiche de {{item.name}}">
+              {{item.name}}
+            </button>
+            <span class="metro-inventory-detail">{{#if item.isHelmet}}Casque{{else}}Armure{{/if}}</span>
+            <span class="metro-inventory-detail">Protection {{item.system.protection}}</span>
+            <span class="metro-inventory-detail">{{#if item.system.resilience}}Résilience{{else}}Sans résilience{{/if}}</span>
+            <span class="metro-inventory-total">{{item.system.encumbrance}} empl.</span>
+            <button type="button" class="metro-inventory-open" data-open-item="{{item.id}}" title="Ouvrir la fiche">Fiche</button>
+            <button type="button" class="metro-inventory-remove" data-remove-item="{{item.id}}" title="Retirer de l'inventaire" aria-label="Retirer {{item.name}}">×</button>
+          </div>
+        {{/each}}
+        <button type="button" class="metro-inventory-protection-roll" data-roll-protection>
+          Lancer le jet de protection total
+        </button>
+      {{else}}
+        <p class="metro-inventory-empty">Dépose une armure ou un casque ici.</p>
+      {{/if}}
+    </div>
+  </section>
+
+  <!-- Encombrement -->
+  <section class="metro-inventory-section metro-encumbrance-section">
+    <h2>Encombrement total</h2>
+
+    <div class="metro-encumbrance-summary">
+      <strong>{{encumbrance.total}} / {{encumbrance.capacity}} emplacements</strong>
+      {{#if encumbrance.isOver}}
+        <span class="metro-encumbrance-warning">Capacité dépassée</span>
+      {{else}}
+        <span class="metro-encumbrance-ok">Dans la limite</span>
+      {{/if}}
+    </div>
+
+    <div class="metro-encumbrance-breakdown">
+      <span>Objets : {{encumbrance.genericLoad}}</span>
+      <span>Armes : {{encumbrance.weaponLoad}}</span>
+      <span>Protections : {{encumbrance.armorLoad}}</span>
+      <span>Réserves : {{encumbrance.reserveLoad}}</span>
+    </div>
+
+    <p class="metro-hint">Limite indicative : Vigueur × 2. Le total peut dépasser la limite.</p>
+  </section>
+</section>
+
+
+
+
+    <section class="metro-tab-panel" data-metro-panel="donnees" role="tabpanel" hidden>
+    <h2>Données & biographie</h2>
+
+    <label class="metro-text-card metro-biography">
+        <span class="metro-text-label">Notes, histoire et informations complémentaires</span>
+        <textarea
+        name="system.biography"
+        placeholder="Raconte l'histoire du personnage, ses relations, ses secrets, ses objectifs...">{{system.biography}}</textarea>
+    </label>
+    </section>
+
+</div>

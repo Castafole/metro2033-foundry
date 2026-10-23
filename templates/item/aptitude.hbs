@@ -1,0 +1,31 @@
+
+<div class="metro2033-sheet metro-aptitude-sheet">
+  <header class="metro-aptitude-header">
+    <p class="metro-subtitle">MÉTRO 2033 · APTITUDE</p>
+    <h2>Fiche d'aptitude</h2>
+  </header>
+
+  <label class="metro-field">
+    <span>Nom de l'aptitude</span>
+    <input
+      type="text"
+      name="name"
+      value="{{item.name}}"
+      placeholder="Nom de l'aptitude"
+    >
+  </label>
+
+  <label class="metro-field metro-aptitude-description">
+    <span>Description</span>
+    <textarea
+      name="system.description"
+      placeholder="Décris ici les effets et les conditions d'utilisation de l'aptitude..."
+    >{{system.description}}</textarea>
+  </label>
+
+  <div class="metro-aptitude-actions">
+    <button type="button" data-action="publish-aptitude">
+      Publier l'aptitude dans le chat
+    </button>
+  </div>
+</div>

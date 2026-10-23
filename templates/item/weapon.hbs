@@ -1,0 +1,108 @@
+
+<div class="metro2033-sheet metro-weapon-item-sheet">
+  <header class="metro-aptitude-header">
+    <p class="metro-subtitle">MÉTRO 2033 · ARMEMENT</p>
+    <h2>Fiche d'arme</h2>
+  </header>
+
+  <div class="metro-item-illustration">
+    <img
+      src="{{item.img}}"
+      data-edit="img"
+      alt="Illustration de {{item.name}}"
+      title="Cliquer pour modifier l'image"
+    >
+  </div>
+
+  <label class="metro-field">
+    <span>Nom de l'arme</span>
+    <input
+      type="text"
+      name="name"
+      value="{{item.name}}"
+      placeholder="Nom de l'arme"
+    >
+  </label>
+
+  <div class="metro-weapon-properties">
+    <label class="metro-field">
+      <span>Prise</span>
+      <select name="system.grip">
+        <option value="1M" {{#if isGrip1M}}selected{{/if}}>1 main</option>
+        <option value="2M" {{#if isGrip2M}}selected{{/if}}>2 mains</option>
+        <option value="1M/2M" {{#if isGripFlexible}}selected{{/if}}>1 ou 2 mains</option>
+      </select>
+    </label>
+
+    <label class="metro-field">
+      <span>Compétence d'attaque</span>
+      <select name="system.attackSkill">
+        <option value="tir" {{#if isTir}}selected{{/if}}>Tir (Agilité)</option>
+        <option value="corpsMelee" {{#if isMelee}}selected{{/if}}>Corps à corps (Vigueur)</option>
+      </select>
+    </label>
+
+    <label class="metro-field">
+      <span>Bonus au jet (dés)</span>
+      <input type="number" name="system.bonus"
+        value="{{system.bonus}}" min="0" step="1">
+    </label>
+
+    <label class="metro-field">
+      <span>Dégâts de base</span>
+      <input type="number" name="system.damage"
+        value="{{system.damage}}" min="0" step="1">
+    </label>
+
+    <label class="metro-field">
+      <span>Fiabilité</span>
+      <input type="number" name="system.reliability"
+        value="{{system.reliability}}" min="0" step="1">
+    </label>
+
+    <label class="metro-field">
+      <span>Portée</span>
+      <input type="text" name="system.range"
+        value="{{system.range}}" placeholder="Contact, Courte, Moyenne...">
+    </label>
+
+    <label class="metro-field">
+      <span>Encombrement</span>
+      <input type="number" name="system.encumbrance"
+        value="{{system.encumbrance}}" min="0" step="0.25">
+    </label>
+
+    <label class="metro-weapon-explosive">
+      <input type="checkbox" name="system.explosive"
+        {{#if system.explosive}}checked{{/if}}>
+      <span>Dégâts explosifs (E)</span>
+    </label>
+  </div>
+
+  <label class="metro-field metro-item-description">
+    <span>Description</span>
+    <textarea
+      name="system.description"
+      placeholder="Type d'arme, particularités, munitions..."
+    >{{system.description}}</textarea>
+  </label>
+
+  <div class="metro-item-actions">
+    <button type="button" data-action="publish-weapon">
+      Afficher l'arme dans le chat
+    </button>
+  </div>
+
+  {{#if isOwned}}
+    <div class="metro-item-actions">
+      <button type="button" data-action="attack-weapon">
+        Lancer une attaque avec cette arme
+      </button>
+    </div>
+  {{else}}
+    <p class="metro-placeholder">
+      Pour lancer une attaque depuis cette fiche, ajoute d'abord l'arme
+      à l'inventaire d'un personnage.
+    </p>
+  {{/if}}
+</div>

@@ -1,0 +1,210 @@
+
+<div class="metro2033-sheet metro-npc-sheet">
+  <header class="metro-sheet-header">
+    <div class="metro-portrait">
+      <img
+        src="{{actor.img}}"
+        data-edit="img"
+        alt="Portrait de {{actor.name}}"
+        title="Cliquer pour modifier le portrait ou le token"
+>
+    </div>
+
+    <div class="metro-identity">
+      <label class="metro-field">
+        <span>Nom du PNJ</span>
+        <input
+          type="text"
+          name="name"
+          value="{{actor.name}}"
+          placeholder="Nom du personnage"
+        >
+      </label>
+
+      <p class="metro-subtitle">MÉTRO 2033 · PERSONNAGE NON JOUEUR</p>
+    </div>
+  </header>
+
+  <nav class="metro-tabs" role="tablist" aria-label="Fiche du PNJ">
+    <button type="button" data-metro-tab="general" role="tab">Général</button>
+    <button type="button" data-metro-tab="donnees" role="tab">Données</button>
+  </nav>
+
+  <section class="metro-tab-panel" data-metro-panel="general" role="tabpanel">
+    <div class="metro-section-heading">
+      <h2>Attributs & compétences</h2>
+    </div>
+
+    <div class="metro-attribute-grid">
+      <section class="metro-attribute-card">
+
+        <div class="metro-attribute-header">
+          <h3>Vigueur</h3>
+          <div class="metro-attribute-values">
+            <label>Base
+              <input type="number" name="system.vigueur.base"
+                value="{{system.vigueur.base}}" min="0" step="1">
+            </label>
+            <label>Actuelle
+              <input type="number" name="system.vigueur.value"
+                value="{{system.vigueur.value}}" min="0" step="1">
+            </label>
+          </div>
+        </div>
+
+        <label class="metro-skill">Bricolage
+          <input type="number" name="system.vigueur.skills.bricolage"
+            value="{{system.vigueur.skills.bricolage}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Corps à corps
+          <input type="number" name="system.vigueur.skills.corpsMelee"
+            value="{{system.vigueur.skills.corpsMelee}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Endurance
+          <input type="number" name="system.vigueur.skills.endurance"
+            value="{{system.vigueur.skills.endurance}}" min="0" step="1">
+        </label>
+      </section>
+
+      <section class="metro-attribute-card">
+
+      <div class="metro-attribute-header">
+        <h3>Agilité</h3>
+        <div class="metro-attribute-values">
+          <label>Base
+            <input type="number" name="system.agilite.base"
+              value="{{system.agilite.base}}" min="0" step="1">
+          </label>
+          <label>Actuelle
+            <input type="number" name="system.agilite.value"
+              value="{{system.agilite.value}}" min="0" step="1">
+          </label>
+        </div>
+      </div>
+
+        <label class="metro-skill">Furtivité
+          <input type="number" name="system.agilite.skills.furtivite"
+            value="{{system.agilite.skills.furtivite}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Réaction
+          <input type="number" name="system.agilite.skills.reaction"
+            value="{{system.agilite.skills.reaction}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Tir
+          <input type="number" name="system.agilite.skills.tir"
+            value="{{system.agilite.skills.tir}}" min="0" step="1">
+        </label>
+      </section>
+
+      <section class="metro-attribute-card">
+
+      <div class="metro-attribute-header">
+        <h3>Empathie</h3>
+        <div class="metro-attribute-values">
+          <label>Base
+            <input type="number" name="system.empathie.base"
+              value="{{system.empathie.base}}" min="0" step="1">
+          </label>
+          <label>Actuelle
+            <input type="number" name="system.empathie.value"
+              value="{{system.empathie.value}}" min="0" step="1">
+          </label>
+        </div>
+      </div>
+
+        <label class="metro-skill">Soins
+          <input type="number" name="system.empathie.skills.soins"
+            value="{{system.empathie.skills.soins}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Manipulation
+          <input type="number" name="system.empathie.skills.manipulation"
+            value="{{system.empathie.skills.manipulation}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Analyse
+          <input type="number" name="system.empathie.skills.analyse"
+            value="{{system.empathie.skills.analyse}}" min="0" step="1">
+        </label>
+      </section>
+
+      <section class="metro-attribute-card">
+
+      <div class="metro-attribute-header">
+        <h3>Esprit</h3>
+        <div class="metro-attribute-values">
+          <label>Base
+            <input type="number" name="system.esprit.base"
+              value="{{system.esprit.base}}" min="0" step="1">
+          </label>
+          <label>Actuelle
+            <input type="number" name="system.esprit.value"
+              value="{{system.esprit.value}}" min="0" step="1">
+          </label>
+        </div>
+      </div>
+
+        <label class="metro-skill">Survie
+          <input type="number" name="system.esprit.skills.survie"
+            value="{{system.esprit.skills.survie}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Observation
+          <input type="number" name="system.esprit.skills.observation"
+            value="{{system.esprit.skills.observation}}" min="0" step="1">
+        </label>
+        <label class="metro-skill">Compréhension
+          <input type="number" name="system.esprit.skills.comprehension"
+            value="{{system.esprit.skills.comprehension}}" min="0" step="1">
+        </label>
+      </section>
+    </div>
+
+    <section class="metro-aptitudes-card" data-aptitude-dropzone>
+      <div class="metro-aptitudes-heading">
+        <h3>Aptitudes</h3>
+        <span>Glisse les aptitudes ici</span>
+      </div>
+
+      <div class="metro-aptitude-list">
+        {{#if aptitudes.length}}
+          {{#each aptitudes as |aptitude|}}
+            <div class="metro-aptitude-row">
+              <button
+                type="button"
+                class="metro-aptitude-name"
+                data-open-aptitude="{{aptitude.id}}"
+                title="Ouvrir la fiche de {{aptitude.name}}"
+              >
+                {{aptitude.name}}
+              </button>
+
+              <button
+                type="button"
+                class="metro-aptitude-remove"
+                data-remove-aptitude="{{aptitude.id}}"
+                title="Retirer cette aptitude du PNJ"
+                aria-label="Retirer {{aptitude.name}}"
+              >
+                ×
+              </button>
+            </div>
+          {{/each}}
+        {{else}}
+          <p class="metro-aptitude-empty">
+            Aucune aptitude. Dépose un objet Aptitude dans cette zone.
+          </p>
+        {{/if}}
+      </div>
+    </section>
+  </section>
+
+  <section class="metro-tab-panel" data-metro-panel="donnees" role="tabpanel" hidden>
+    <h2>Données du PNJ</h2>
+
+    <label class="metro-text-card metro-biography">
+      <span class="metro-text-label">Notes du MJ</span>
+      <textarea
+        name="system.notes"
+        placeholder="Informations secrètes, motivations, relations, comportement..."
+      >{{system.notes}}</textarea>
+    </label>
+  </section>
+</div>

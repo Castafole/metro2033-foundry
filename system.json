@@ -1,0 +1,44 @@
+
+{
+  "type": "system",
+  "id": "metro2033",
+  "title": "Métro 2033",
+  "description": "Système de jeu indépendant pour Métro 2033.",
+  "version": "0.2.0",
+  "authors": [
+    {
+      "name": "Maxime"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "esmodules": [
+    "metro2033.mjs"
+  ],
+  "styles": [
+    "styles/system.css"
+  ],
+  "documentTypes": {
+    "Actor": {
+      "player": {},
+      "npc": {}
+    },
+    "Item": {
+      "generic": {},
+      "aptitude": {},
+      "weapon": {},
+      "armor": {}
+    }
+  },
+"languages": [
+  {
+    "lang": "fr",
+    "name": "Français",
+    "path": "lang/fr.json"
+  }
+],
+"socket": true
+}
+
