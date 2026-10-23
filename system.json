@@ -39,6 +39,9 @@
     "path": "lang/fr.json"
   }
 ],
-"socket": true
+"socket": true,
+"url": "https://github.com/Castafole/metro2033-foundry",
+"manifest": "https://raw.githubusercontent.com/Castafole/metro2033-foundry/main/system.json",
+"download": "https://github.com/Castafole/metro2033-foundry/releases/latest/download/metro2033.zip"
 }
 
