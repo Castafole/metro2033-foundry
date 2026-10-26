@@ -4,7 +4,7 @@
   "id": "metro2033",
   "title": "Métro 2033",
   "description": "Système de jeu indépendant pour Métro 2033.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "authors": [
     {
       "name": "Maxime"
@@ -40,8 +40,8 @@
   }
 ],
 "socket": true,
-"url": "https://github.com/Castafole/metro2033-foundry",
-"manifest": "https://raw.githubusercontent.com/Castafole/metro2033-foundry/main/system.json",
-"download": "https://github.com/Castafole/metro2033-foundry/releases/latest/download/metro2033.zip"
+  "url": "https://github.com/Castafole/metro2033-foundry",
+  "manifest": "https://raw.githubusercontent.com/Castafole/metro2033-foundry/main/system.json",
+  "download": "https://github.com/Castafole/metro2033-foundry/releases/latest/download/metro2033.zip"
 }
 

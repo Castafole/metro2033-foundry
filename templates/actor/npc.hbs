@@ -1,4 +1,3 @@
-
 <div class="metro2033-sheet metro-npc-sheet">
   <header class="metro-sheet-header">
     <div class="metro-portrait">
@@ -25,10 +24,11 @@
     </div>
   </header>
 
-  <nav class="metro-tabs" role="tablist" aria-label="Fiche du PNJ">
-    <button type="button" data-metro-tab="general" role="tab">Général</button>
-    <button type="button" data-metro-tab="donnees" role="tab">Données</button>
-  </nav>
+<nav class="metro-tabs" role="tablist" aria-label="Fiche du PNJ">
+  <button type="button" data-metro-tab="general" role="tab">Général</button>
+  <button type="button" data-metro-tab="inventaire" role="tab">Équipement</button>
+  <button type="button" data-metro-tab="donnees" role="tab">Données</button>
+</nav>
 
   <section class="metro-tab-panel" data-metro-panel="general" role="tabpanel">
     <div class="metro-section-heading">
@@ -194,6 +194,212 @@
         {{/if}}
       </div>
     </section>
+  </section>
+
+<!-- Équipement du PNJ -->
+  <section class="metro-tab-panel"
+    data-metro-panel="inventaire"
+    role="tabpanel"
+    hidden>
+
+    <h2>Équipement du PNJ</h2>
+
+    <!-- Objets généraux et butin -->
+    <section class="metro-inventory-section">
+      <div class="metro-section-heading">
+        <h2>Objets et butin</h2>
+        <p>
+          Dépose ici les objets transportés par le PNJ.
+          Ils pourront être récupérés après sa mort ou son abandon.
+        </p>
+      </div>
+
+      <div class="metro-inventory-dropzone" data-item-dropzone="generic">
+        {{#if genericItems.length}}
+          {{#each genericItems as |item|}}
+            <div class="metro-inventory-row">
+              <img
+                class="metro-inventory-thumbnail"
+                src="{{item.img}}"
+                alt="Illustration de {{item.name}}"
+                title="{{item.name}}"
+              >
+
+              <button
+                type="button"
+                class="metro-inventory-item-name"
+                data-open-item="{{item.id}}"
+                title="Ouvrir la fiche de {{item.name}}"
+              >
+                {{item.name}}
+              </button>
+
+              <span class="metro-inventory-detail">
+                Qté : {{item.system.quantity}}
+              </span>
+
+              <span class="metro-inventory-detail">
+                Par objet : {{item.system.encumbrance}}
+              </span>
+
+              <span class="metro-inventory-total">
+                {{item.totalEncumbrance}} empl.
+              </span>
+
+              <button
+                type="button"
+                class="metro-inventory-remove"
+                data-remove-item="{{item.id}}"
+                title="Retirer cet objet du PNJ"
+                aria-label="Retirer {{item.name}}"
+              >×</button>
+            </div>
+          {{/each}}
+        {{else}}
+          <p class="metro-inventory-empty">
+            Dépose un objet général ici.
+          </p>
+        {{/if}}
+      </div>
+    </section>
+
+    <!-- Armes -->
+    <section class="metro-inventory-section">
+      <div class="metro-section-heading">
+        <h2>Armes</h2>
+        <p>Clique sur le nom d'une arme pour lancer une attaque.</p>
+      </div>
+
+      <div class="metro-inventory-dropzone"
+        data-item-dropzone="weapon">
+
+        {{#if weaponItems.length}}
+          {{#each weaponItems as |item|}}
+            <div class="metro-inventory-row metro-weapon-inventory-row">
+              <img
+                class="metro-inventory-thumbnail"
+                src="{{item.img}}"
+                alt="Illustration de {{item.name}}"
+                title="{{item.name}}"
+              >
+
+              <button
+                type="button"
+                class="metro-inventory-item-name"
+                data-attack-weapon="{{item.id}}"
+                title="Lancer une attaque avec {{item.name}}"
+              >
+                {{item.name}}
+              </button>
+
+              <span class="metro-inventory-detail">
+                {{item.system.grip}}
+              </span>
+
+              <span class="metro-inventory-detail">
+                Bonus +{{item.system.bonus}}
+              </span>
+
+              <span class="metro-inventory-detail">
+                Dégâts {{item.system.damage}}{{#if item.system.explosive}} (E){{/if}}
+              </span>
+
+              <button
+                type="button"
+                class="metro-inventory-open"
+                data-open-item="{{item.id}}"
+                title="Ouvrir la fiche de l'arme"
+              >Fiche</button>
+
+              <button
+                type="button"
+                class="metro-inventory-remove"
+                data-remove-item="{{item.id}}"
+                title="Retirer cette arme du PNJ"
+                aria-label="Retirer {{item.name}}"
+              >×</button>
+            </div>
+          {{/each}}
+        {{else}}
+          <p class="metro-inventory-empty">
+            Dépose une arme ici.
+          </p>
+        {{/if}}
+      </div>
+    </section>
+
+    <!-- Protections -->
+    <section class="metro-inventory-section">
+      <div class="metro-section-heading">
+        <h2>Protections</h2>
+        <p>
+          Les valeurs du casque et de l'armure sont cumulées
+          pour le jet de protection total.
+        </p>
+      </div>
+
+      <div class="metro-inventory-dropzone"
+        data-item-dropzone="armor">
+
+        {{#if armorItems.length}}
+          {{#each armorItems as |item|}}
+            <div class="metro-inventory-row">
+              <img
+                class="metro-inventory-thumbnail"
+                src="{{item.img}}"
+                alt="Illustration de {{item.name}}"
+                title="{{item.name}}"
+              >
+
+              <button
+                type="button"
+                class="metro-inventory-item-name"
+                data-open-item="{{item.id}}"
+                title="Ouvrir la fiche de {{item.name}}"
+              >
+                {{item.name}}
+              </button>
+
+              <span class="metro-inventory-detail">
+                {{#if item.isHelmet}}Casque{{else}}Armure{{/if}}
+              </span>
+
+              <span class="metro-inventory-detail">
+                Protection {{item.system.protection}}
+              </span>
+
+              <button
+                type="button"
+                class="metro-inventory-open"
+                data-open-item="{{item.id}}"
+                title="Ouvrir la fiche"
+              >Fiche</button>
+
+              <button
+                type="button"
+                class="metro-inventory-remove"
+                data-remove-item="{{item.id}}"
+                title="Retirer cette protection du PNJ"
+                aria-label="Retirer {{item.name}}"
+              >×</button>
+            </div>
+          {{/each}}
+
+          <button
+            type="button"
+            class="metro-inventory-protection-roll"
+            data-roll-protection
+          >
+            Lancer le jet de protection total
+          </button>
+        {{else}}
+          <p class="metro-inventory-empty">
+            Dépose une armure ou un casque ici.
+          </p>
+        {{/if}}
+      </div>
+    </section>
+
   </section>
 
   <section class="metro-tab-panel" data-metro-panel="donnees" role="tabpanel" hidden>
